@@ -145,7 +145,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="text" val="ALU"/>
     </tool>
   </lib>
-  <main name="Branch-Control-Selector"/>
+  <main name="Branch-Control-Pre-Selector"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -178,8 +178,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="Branch-Control-Selector">
-    <a name="circuit" val="Branch-Control-Selector"/>
+  <circuit name="Branch-Control-Pre-Selector">
+    <a name="circuit" val="Branch-Control-Pre-Selector"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -195,111 +195,43 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text font-family="Segoe UI Black" font-size="12" font-style="italic" text-anchor="middle" x="90" y="68">BC-Selector</text>
       <circ-port height="8" pin="60,50" width="8" x="46" y="76"/>
       <circ-port height="8" pin="60,90" width="8" x="46" y="96"/>
-      <circ-port height="8" pin="60,130" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="60,170" width="8" x="46" y="136"/>
-      <circ-port height="8" pin="60,210" width="8" x="46" y="156"/>
-      <circ-port height="8" pin="60,250" width="8" x="46" y="176"/>
-      <circ-port height="8" pin="60,290" width="8" x="46" y="196"/>
-      <circ-port height="10" pin="370,130" width="10" x="125" y="115"/>
+      <circ-port height="10" pin="370,70" width="10" x="125" y="55"/>
       <circ-anchor facing="east" height="6" width="6" x="127" y="117"/>
     </appear>
-    <wire from="(210,160)" to="(270,160)"/>
-    <wire from="(210,200)" to="(270,200)"/>
+    <wire from="(320,70)" to="(370,70)"/>
     <wire from="(60,50)" to="(80,50)"/>
     <wire from="(60,90)" to="(80,90)"/>
-    <wire from="(60,130)" to="(80,130)"/>
-    <wire from="(60,170)" to="(80,170)"/>
-    <wire from="(60,210)" to="(80,210)"/>
-    <wire from="(60,250)" to="(80,250)"/>
-    <wire from="(60,290)" to="(80,290)"/>
-    <wire from="(260,150)" to="(270,150)"/>
-    <wire from="(260,190)" to="(270,190)"/>
-    <wire from="(210,140)" to="(270,140)"/>
-    <wire from="(210,180)" to="(270,180)"/>
-    <wire from="(290,130)" to="(370,130)"/>
-    <wire from="(260,170)" to="(270,170)"/>
-    <comp lib="0" loc="(210,180)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="bltz"/>
-    </comp>
-    <comp lib="0" loc="(60,130)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(260,190)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="jr"/>
-    </comp>
-    <comp lib="0" loc="(210,200)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="j"/>
-    </comp>
-    <comp lib="0" loc="(80,250)" name="Tunnel">
-      <a name="label" val="jr"/>
-    </comp>
-    <comp lib="0" loc="(80,290)" name="Tunnel">
-      <a name="label" val="j"/>
-    </comp>
-    <comp lib="0" loc="(60,210)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(210,160)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="blez"/>
-    </comp>
-    <comp lib="0" loc="(60,290)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(80,90)" name="Tunnel">
-      <a name="label" val="bne"/>
-    </comp>
-    <comp lib="0" loc="(80,210)" name="Tunnel">
-      <a name="label" val="bltz"/>
-    </comp>
-    <comp lib="0" loc="(60,250)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(60,170)" name="Pin">
-      <a name="tristate" val="false"/>
+    <wire from="(200,50)" to="(270,50)"/>
+    <wire from="(200,90)" to="(270,90)"/>
+    <comp lib="0" loc="(80,50)" name="Tunnel">
+      <a name="label" val="beq"/>
     </comp>
     <comp lib="0" loc="(60,90)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(80,50)" name="Tunnel">
+    <comp lib="0" loc="(200,50)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="label" val="beq"/>
     </comp>
-    <comp lib="0" loc="(80,170)" name="Tunnel">
-      <a name="label" val="bgtz"/>
-    </comp>
-    <comp lib="0" loc="(80,130)" name="Tunnel">
-      <a name="label" val="blez"/>
+    <comp lib="1" loc="(320,70)" name="OR Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(60,50)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(370,130)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Selector"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(210,140)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="beq"/>
-    </comp>
-    <comp lib="0" loc="(260,150)" name="Tunnel">
+    <comp lib="0" loc="(200,90)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="bne"/>
     </comp>
-    <comp lib="0" loc="(290,130)" name="Splitter">
+    <comp lib="0" loc="(370,70)" name="Pin">
       <a name="facing" val="west"/>
-      <a name="fanout" val="7"/>
-      <a name="incoming" val="7"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Pre-Selector"/>
+      <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(260,170)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="bgtz"/>
+    <comp lib="0" loc="(80,90)" name="Tunnel">
+      <a name="label" val="bne"/>
     </comp>
   </circuit>
 </project>
