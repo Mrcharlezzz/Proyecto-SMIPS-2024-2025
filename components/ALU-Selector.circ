@@ -235,61 +235,33 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(200,180)" to="(300,180)"/>
     <wire from="(200,100)" to="(300,100)"/>
     <wire from="(200,140)" to="(300,140)"/>
-    <comp lib="0" loc="(440,170)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ALU Selector"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(250,110)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="sub"/>
-    </comp>
-    <comp lib="0" loc="(200,100)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="add"/>
-    </comp>
-    <comp lib="0" loc="(250,210)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="divu"/>
-    </comp>
-    <comp lib="0" loc="(200,160)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="nor"/>
-    </comp>
-    <comp lib="0" loc="(250,130)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="sltu"/>
-    </comp>
-    <comp lib="0" loc="(200,180)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="mult"/>
-    </comp>
-    <comp lib="2" loc="(340,170)" name="Priority Encoder">
-      <a name="select" val="4"/>
-      <a name="disabled" val="0"/>
-    </comp>
     <comp lib="0" loc="(250,190)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="mulu"/>
-    </comp>
-    <comp lib="0" loc="(200,200)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="div"/>
-    </comp>
-    <comp lib="0" loc="(200,120)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="slt"/>
     </comp>
     <comp lib="6" loc="(268,48)" name="Text">
       <a name="text" val="ALU Operations"/>
       <a name="font" val="Segoe UI Black italic 18"/>
     </comp>
+    <comp lib="0" loc="(200,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="nor"/>
+    </comp>
     <comp lib="0" loc="(200,140)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="and"/>
+    </comp>
+    <comp lib="0" loc="(250,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="divu"/>
+    </comp>
+    <comp lib="0" loc="(200,200)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="div"/>
+    </comp>
+    <comp lib="0" loc="(250,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="sltu"/>
     </comp>
     <comp lib="0" loc="(250,150)" name="Pin">
       <a name="tristate" val="false"/>
@@ -299,32 +271,33 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="xor"/>
     </comp>
-  </circuit>
-  <circuit name="ALU-Input-Selector">
-    <a name="circuit" val="ALU-Input-Selector"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="SansSerif plain 12"/>
-    <appear>
-      <rect fill="#7ea0ff" height="42" stroke="#000000" stroke-width="2" width="111" x="50" y="19"/>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="104" y="43">ALU-Input-Selector</text>
-      <circ-port height="8" pin="90,40" width="8" x="46" y="36"/>
-      <circ-anchor facing="east" height="6" width="6" x="157" y="37"/>
-    </appear>
-    <wire from="(90,40)" to="(110,40)"/>
-    <comp lib="0" loc="(110,40)" name="Tunnel">
-      <a name="label" val="Type-I"/>
-    </comp>
-    <comp lib="2" loc="(500,110)" name="Priority Encoder">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="0" loc="(290,120)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Type-I"/>
-    </comp>
-    <comp lib="0" loc="(90,40)" name="Pin">
+    <comp lib="0" loc="(250,110)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="Type-I"/>
+      <a name="label" val="sub"/>
+    </comp>
+    <comp lib="0" loc="(440,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ALU Selector"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,120)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="slt"/>
+    </comp>
+    <comp lib="0" loc="(200,100)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="add"/>
+    </comp>
+    <comp lib="2" loc="(340,170)" name="Priority Encoder">
+      <a name="select" val="4"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(200,180)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="mult"/>
     </comp>
   </circuit>
   <circuit name="Const-Extender-Selector">
@@ -356,14 +329,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(200,120)" name="OR Gate">
       <a name="inputs" val="3"/>
     </comp>
-    <comp lib="0" loc="(80,160)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="xori"/>
-    </comp>
-    <comp lib="0" loc="(80,80)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="andi"/>
-    </comp>
     <comp lib="0" loc="(230,120)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -373,6 +338,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(80,120)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="ori"/>
+    </comp>
+    <comp lib="0" loc="(80,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="andi"/>
+    </comp>
+    <comp lib="0" loc="(80,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="xori"/>
     </comp>
   </circuit>
 </project>
