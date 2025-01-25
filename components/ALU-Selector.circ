@@ -192,21 +192,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <rect fill="#f5ff58" height="261" stroke="#000000" stroke-width="2" width="101" x="70" y="29"/>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="89" y="209">Mult</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="85" y="65">Sub</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="83" y="148">Or</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="87" y="188">Xor</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="89" y="227">Mulu</text>
-      <text font-family="Segoe UI Black" font-size="20" font-style="italic" text-anchor="middle" x="138" y="63">ALU</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="87" y="45">Add</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="84" y="86">Stl</text>
-      <text font-family="Segoe UI Black" font-size="16" font-style="italic" text-anchor="middle" x="134" y="81">Encoder</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="86" y="166">Nor</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="139" y="154">Selector</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="84" y="250">Div</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="86" y="108">Stlu</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="88" y="268">Divu</text>
-      <text font-family="Segoe UI Black" font-size="10" font-style="italic" text-anchor="middle" x="87" y="128">And</text>
+      <text font-family="Segoe UI Black" font-size="32" font-style="italic" text-anchor="middle" x="121" y="113">ALU</text>
+      <text font-family="Segoe UI Black" font-size="24" font-style="italic" text-anchor="middle" x="121" y="140">Encoder</text>
       <circ-port height="8" pin="200,100" width="8" x="66" y="46"/>
       <circ-port height="8" pin="250,110" width="8" x="66" y="66"/>
       <circ-port height="8" pin="200,120" width="8" x="66" y="86"/>
@@ -242,80 +229,80 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(200,100)" to="(300,100)"/>
     <wire from="(200,140)" to="(300,140)"/>
     <wire from="(340,180)" to="(410,180)"/>
-    <comp lib="0" loc="(200,160)" name="Pin">
+    <comp lib="0" loc="(200,140)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="nor"/>
-    </comp>
-    <comp lib="0" loc="(250,150)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="or"/>
-    </comp>
-    <comp lib="6" loc="(268,48)" name="Text">
-      <a name="text" val="ALU Operations"/>
-      <a name="font" val="Segoe UI Black italic 18"/>
+      <a name="label" val="and"/>
     </comp>
     <comp lib="0" loc="(250,110)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="sub"/>
     </comp>
-    <comp lib="0" loc="(200,140)" name="Pin">
+    <comp lib="0" loc="(200,120)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="and"/>
+      <a name="label" val="slt"/>
     </comp>
-    <comp lib="0" loc="(320,290)" name="Power">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(200,200)" name="Pin">
+    <comp lib="0" loc="(200,100)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="div"/>
-    </comp>
-    <comp lib="0" loc="(250,130)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="sltu"/>
+      <a name="label" val="add"/>
     </comp>
     <comp lib="0" loc="(250,210)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="divu"/>
     </comp>
+    <comp lib="6" loc="(268,48)" name="Text">
+      <a name="text" val="ALU Operations"/>
+      <a name="font" val="Segoe UI Black italic 18"/>
+    </comp>
+    <comp lib="0" loc="(200,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="nor"/>
+    </comp>
+    <comp lib="0" loc="(250,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="xor"/>
+    </comp>
+    <comp lib="0" loc="(250,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="sltu"/>
+    </comp>
+    <comp lib="0" loc="(390,150)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(200,180)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="mult"/>
     </comp>
-    <comp lib="0" loc="(250,190)" name="Pin">
+    <comp lib="0" loc="(250,150)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="mulu"/>
+      <a name="label" val="or"/>
+    </comp>
+    <comp lib="2" loc="(460,160)" name="Multiplexer">
+      <a name="width" val="4"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(320,290)" name="Power">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="2" loc="(340,170)" name="Priority Encoder">
+      <a name="select" val="4"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(200,200)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="div"/>
     </comp>
     <comp lib="0" loc="(540,160)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="ALU Selector"/>
+      <a name="label" val="ALU Op Selector"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(200,120)" name="Pin">
+    <comp lib="0" loc="(250,190)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="slt"/>
-    </comp>
-    <comp lib="0" loc="(390,150)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(340,170)" name="Priority Encoder">
-      <a name="select" val="4"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="0" loc="(200,100)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="add"/>
-    </comp>
-    <comp lib="0" loc="(250,170)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="xor"/>
-    </comp>
-    <comp lib="2" loc="(460,160)" name="Multiplexer">
-      <a name="width" val="4"/>
-      <a name="enable" val="false"/>
+      <a name="label" val="mulu"/>
     </comp>
   </circuit>
   <circuit name="Const-Extender-Selector">
@@ -325,11 +312,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <rect fill="#52ff71" height="35" stroke="#000000" stroke-width="2" width="119" x="121" y="65"/>
-      <text font-family="Segoe UI Black" font-size="12" font-style="italic" text-anchor="middle" x="168" y="76">Const-Extender</text>
-      <text font-family="Segoe UI Black" font-size="12" font-style="italic" text-anchor="middle" x="158" y="85">Selector</text>
-      <text font-family="Segoe UI Black" font-size="9" font-style="italic" text-anchor="middle" x="134" y="95">andi</text>
-      <text font-family="Segoe UI Black" font-size="9" font-style="italic" text-anchor="middle" x="215" y="94">xori</text>
-      <text font-family="Segoe UI Black" font-size="9" font-style="italic" text-anchor="middle" x="180" y="94">ori</text>
+      <text font-family="Segoe UI Black" font-size="14" font-style="italic" text-anchor="middle" x="180" y="79">Const-Extender</text>
+      <text font-family="Segoe UI Black" font-size="14" font-style="italic" text-anchor="middle" x="178" y="91">Selector</text>
       <circ-port height="8" pin="80,80" width="8" x="136" y="96"/>
       <circ-port height="8" pin="80,120" width="8" x="176" y="96"/>
       <circ-port height="8" pin="80,160" width="8" x="216" y="96"/>
@@ -344,17 +328,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(130,140)" to="(150,140)"/>
     <wire from="(80,80)" to="(130,80)"/>
     <wire from="(80,160)" to="(130,160)"/>
-    <comp lib="0" loc="(80,80)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="andi"/>
-    </comp>
-    <comp lib="1" loc="(200,120)" name="OR Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(80,160)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="xori"/>
-    </comp>
     <comp lib="0" loc="(80,120)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="ori"/>
@@ -364,6 +337,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="label" val="Selector"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(200,120)" name="OR Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(80,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="xori"/>
+    </comp>
+    <comp lib="0" loc="(80,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="andi"/>
     </comp>
   </circuit>
 </project>
