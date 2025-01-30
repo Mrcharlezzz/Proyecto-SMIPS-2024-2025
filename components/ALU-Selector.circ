@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
@@ -14,7 +15,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
     </tool>
     <tool name="Tunnel">
-      <a name="facing" val="east"/>
       <a name="label" val="Andi"/>
     </tool>
     <tool name="Pull Resistor">
@@ -183,7 +183,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </tool>
     <tool lib="1" name="NOT Gate"/>
     <tool lib="1" name="AND Gate"/>
-    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </tool>
   </toolbar>
   <circuit name="ALU-Operation-Selector">
     <a name="circuit" val="ALU-Operation-Selector"/>
@@ -191,108 +194,208 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
-      <rect fill="#f5ff58" height="261" stroke="#000000" stroke-width="2" width="101" x="70" y="29"/>
-      <text font-family="Segoe UI Black" font-size="32" font-style="italic" text-anchor="middle" x="121" y="113">ALU</text>
-      <text font-family="Segoe UI Black" font-size="24" font-style="italic" text-anchor="middle" x="121" y="140">Encoder</text>
-      <circ-port height="8" pin="200,100" width="8" x="66" y="46"/>
-      <circ-port height="8" pin="250,110" width="8" x="66" y="66"/>
-      <circ-port height="8" pin="200,120" width="8" x="66" y="86"/>
-      <circ-port height="8" pin="250,130" width="8" x="66" y="106"/>
-      <circ-port height="8" pin="200,140" width="8" x="66" y="126"/>
-      <circ-port height="8" pin="250,150" width="8" x="66" y="146"/>
-      <circ-port height="8" pin="200,160" width="8" x="66" y="166"/>
-      <circ-port height="8" pin="250,170" width="8" x="66" y="186"/>
-      <circ-port height="8" pin="200,180" width="8" x="66" y="206"/>
-      <circ-port height="8" pin="250,190" width="8" x="66" y="226"/>
-      <circ-port height="8" pin="200,200" width="8" x="66" y="246"/>
-      <circ-port height="8" pin="250,210" width="8" x="66" y="266"/>
-      <circ-port height="10" pin="540,160" width="10" x="165" y="145"/>
-      <circ-anchor facing="east" height="6" width="6" x="167" y="147"/>
+      <rect fill="#f5ff58" height="261" stroke="#000000" stroke-width="2" width="108" x="70" y="29"/>
+      <text font-family="Dialog" font-size="32" font-style="italic" text-anchor="middle" x="121" y="113">ALU</text>
+      <text font-family="Dialog" font-size="24" font-style="italic" text-anchor="middle" x="121" y="140">Encoder</text>
+      <circ-port height="8" pin="120,80" width="8" x="66" y="36"/>
+      <circ-port height="8" pin="120,150" width="8" x="66" y="76"/>
+      <circ-port height="8" pin="120,210" width="8" x="66" y="116"/>
+      <circ-port height="8" pin="300,220" width="8" x="66" y="156"/>
+      <circ-port height="8" pin="300,240" width="8" x="66" y="176"/>
+      <circ-port height="8" pin="350,250" width="8" x="66" y="216"/>
+      <circ-port height="8" pin="300,260" width="8" x="66" y="256"/>
+      <circ-port height="8" pin="350,270" width="8" x="76" y="286"/>
+      <circ-port height="10" pin="640,220" width="10" x="175" y="145"/>
+      <circ-port height="8" pin="120,100" width="8" x="66" y="56"/>
+      <circ-port height="8" pin="120,270" width="8" x="66" y="236"/>
+      <circ-port height="8" pin="120,290" width="8" x="66" y="276"/>
+      <circ-port height="8" pin="120,360" width="8" x="96" y="286"/>
+      <circ-port height="8" pin="120,380" width="8" x="116" y="286"/>
+      <circ-port height="8" pin="120,230" width="8" x="66" y="196"/>
+      <circ-port height="8" pin="120,170" width="8" x="66" y="96"/>
+      <circ-port height="8" pin="350,170" width="8" x="66" y="136"/>
+      <circ-port height="8" pin="120,430" width="8" x="136" y="286"/>
+      <circ-port height="8" pin="120,450" width="8" x="156" y="286"/>
+      <circ-anchor facing="east" height="6" width="6" x="177" y="147"/>
     </appear>
-    <wire from="(340,170)" to="(430,170)"/>
-    <wire from="(410,210)" to="(440,210)"/>
-    <wire from="(250,130)" to="(300,130)"/>
-    <wire from="(250,170)" to="(300,170)"/>
-    <wire from="(250,210)" to="(300,210)"/>
-    <wire from="(250,110)" to="(300,110)"/>
-    <wire from="(250,190)" to="(300,190)"/>
-    <wire from="(250,150)" to="(300,150)"/>
-    <wire from="(460,160)" to="(540,160)"/>
-    <wire from="(410,180)" to="(410,210)"/>
-    <wire from="(440,180)" to="(440,210)"/>
-    <wire from="(320,260)" to="(320,290)"/>
-    <wire from="(390,150)" to="(430,150)"/>
-    <wire from="(200,160)" to="(300,160)"/>
-    <wire from="(200,200)" to="(300,200)"/>
-    <wire from="(200,120)" to="(300,120)"/>
-    <wire from="(200,180)" to="(300,180)"/>
-    <wire from="(200,100)" to="(300,100)"/>
-    <wire from="(200,140)" to="(300,140)"/>
-    <wire from="(340,180)" to="(410,180)"/>
-    <comp lib="0" loc="(200,140)" name="Pin">
+    <wire from="(350,230)" to="(400,230)"/>
+    <wire from="(350,270)" to="(400,270)"/>
+    <wire from="(350,170)" to="(400,170)"/>
+    <wire from="(350,250)" to="(400,250)"/>
+    <wire from="(350,210)" to="(400,210)"/>
+    <wire from="(350,190)" to="(400,190)"/>
+    <wire from="(540,240)" to="(540,270)"/>
+    <wire from="(420,320)" to="(420,350)"/>
+    <wire from="(300,260)" to="(400,260)"/>
+    <wire from="(300,160)" to="(400,160)"/>
+    <wire from="(300,180)" to="(400,180)"/>
+    <wire from="(300,220)" to="(400,220)"/>
+    <wire from="(300,200)" to="(400,200)"/>
+    <wire from="(300,240)" to="(400,240)"/>
+    <wire from="(510,240)" to="(510,270)"/>
+    <wire from="(490,210)" to="(530,210)"/>
+    <wire from="(440,230)" to="(530,230)"/>
+    <wire from="(120,210)" to="(150,210)"/>
+    <wire from="(120,230)" to="(150,230)"/>
+    <wire from="(120,150)" to="(150,150)"/>
+    <wire from="(120,170)" to="(150,170)"/>
+    <wire from="(510,270)" to="(540,270)"/>
+    <wire from="(120,80)" to="(140,80)"/>
+    <wire from="(120,100)" to="(140,100)"/>
+    <wire from="(120,290)" to="(140,290)"/>
+    <wire from="(120,270)" to="(140,270)"/>
+    <wire from="(120,360)" to="(140,360)"/>
+    <wire from="(120,380)" to="(140,380)"/>
+    <wire from="(120,450)" to="(140,450)"/>
+    <wire from="(120,430)" to="(140,430)"/>
+    <wire from="(170,90)" to="(180,90)"/>
+    <wire from="(170,280)" to="(180,280)"/>
+    <wire from="(170,370)" to="(180,370)"/>
+    <wire from="(180,220)" to="(190,220)"/>
+    <wire from="(560,220)" to="(640,220)"/>
+    <wire from="(440,240)" to="(510,240)"/>
+    <comp lib="0" loc="(350,250)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="and"/>
+      <a name="label" val="mulu"/>
     </comp>
-    <comp lib="0" loc="(250,110)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="sub"/>
+    <comp lib="1" loc="(180,220)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(200,120)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="slt"/>
+    <comp lib="0" loc="(180,160)" name="Tunnel">
+      <a name="label" val="Slt"/>
     </comp>
-    <comp lib="0" loc="(200,100)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="add"/>
+    <comp lib="0" loc="(180,370)" name="Tunnel">
+      <a name="label" val="Or"/>
     </comp>
-    <comp lib="0" loc="(250,210)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="divu"/>
+    <comp lib="0" loc="(180,280)" name="Tunnel">
+      <a name="label" val="And"/>
     </comp>
-    <comp lib="6" loc="(268,48)" name="Text">
-      <a name="text" val="ALU Operations"/>
-      <a name="font" val="Segoe UI Black italic 18"/>
-    </comp>
-    <comp lib="0" loc="(200,160)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="nor"/>
-    </comp>
-    <comp lib="0" loc="(250,170)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="xor"/>
-    </comp>
-    <comp lib="0" loc="(250,130)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="sltu"/>
-    </comp>
-    <comp lib="0" loc="(390,150)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(200,180)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="mult"/>
-    </comp>
-    <comp lib="0" loc="(250,150)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="or"/>
-    </comp>
-    <comp lib="2" loc="(460,160)" name="Multiplexer">
-      <a name="width" val="4"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(320,290)" name="Power">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="2" loc="(340,170)" name="Priority Encoder">
-      <a name="select" val="4"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="0" loc="(200,200)" name="Pin">
+    <comp lib="0" loc="(300,260)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="div"/>
     </comp>
-    <comp lib="0" loc="(540,160)" name="Pin">
+    <comp lib="0" loc="(300,200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="And"/>
+    </comp>
+    <comp lib="0" loc="(120,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="sltu"/>
+    </comp>
+    <comp lib="1" loc="(170,280)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(170,440)" name="Tunnel">
+      <a name="label" val="Xor"/>
+    </comp>
+    <comp lib="0" loc="(120,430)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="xor"/>
+    </comp>
+    <comp lib="0" loc="(190,220)" name="Tunnel">
+      <a name="label" val="Sltu"/>
+    </comp>
+    <comp lib="0" loc="(350,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Xor"/>
+    </comp>
+    <comp lib="0" loc="(420,350)" name="Power">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(300,220)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="nor"/>
+    </comp>
+    <comp lib="0" loc="(300,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Slt"/>
+    </comp>
+    <comp lib="0" loc="(120,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="slti"/>
+    </comp>
+    <comp lib="2" loc="(560,220)" name="Multiplexer">
+      <a name="width" val="4"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(180,90)" name="Tunnel">
+      <a name="label" val="Add"/>
+    </comp>
+    <comp lib="0" loc="(350,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="sub"/>
+    </comp>
+    <comp lib="0" loc="(120,150)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="slt"/>
+    </comp>
+    <comp lib="1" loc="(170,370)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(120,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="add"/>
+    </comp>
+    <comp lib="0" loc="(120,360)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="or"/>
+    </comp>
+    <comp lib="0" loc="(120,450)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="xori"/>
+    </comp>
+    <comp lib="0" loc="(300,240)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="mult"/>
+    </comp>
+    <comp lib="0" loc="(120,230)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="sltiu"/>
+    </comp>
+    <comp lib="6" loc="(421,68)" name="Text">
+      <a name="text" val="ALU Operations"/>
+      <a name="font" val="Dialog italic 18"/>
+    </comp>
+    <comp lib="1" loc="(180,160)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(170,440)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(120,100)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="addi"/>
+    </comp>
+    <comp lib="0" loc="(490,210)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(120,290)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="andi"/>
+    </comp>
+    <comp lib="0" loc="(300,160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Add"/>
+    </comp>
+    <comp lib="0" loc="(120,380)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="ori"/>
+    </comp>
+    <comp lib="0" loc="(350,210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Or"/>
+    </comp>
+    <comp lib="0" loc="(120,270)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="and"/>
+    </comp>
+    <comp lib="0" loc="(640,220)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
@@ -300,9 +403,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ALU Op Selector"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(250,190)" name="Pin">
+    <comp lib="0" loc="(350,270)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="mulu"/>
+      <a name="label" val="divu"/>
+    </comp>
+    <comp lib="2" loc="(440,230)" name="Priority Encoder">
+      <a name="select" val="4"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="1" loc="(170,90)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(350,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Sltu"/>
     </comp>
   </circuit>
   <circuit name="Const-Extender-Selector">
@@ -312,8 +427,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <rect fill="#52ff71" height="35" stroke="#000000" stroke-width="2" width="119" x="121" y="65"/>
-      <text font-family="Segoe UI Black" font-size="14" font-style="italic" text-anchor="middle" x="180" y="79">Const-Extender</text>
-      <text font-family="Segoe UI Black" font-size="14" font-style="italic" text-anchor="middle" x="178" y="91">Selector</text>
+      <text font-family="Dialog" font-size="14" font-style="italic" text-anchor="middle" x="180" y="79">Const-Extender</text>
+      <text font-family="Dialog" font-size="14" font-style="italic" text-anchor="middle" x="178" y="91">Selector</text>
       <circ-port height="8" pin="80,80" width="8" x="136" y="96"/>
       <circ-port height="8" pin="80,120" width="8" x="176" y="96"/>
       <circ-port height="8" pin="80,160" width="8" x="216" y="96"/>
@@ -328,9 +443,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(130,140)" to="(150,140)"/>
     <wire from="(80,80)" to="(130,80)"/>
     <wire from="(80,160)" to="(130,160)"/>
+    <comp lib="0" loc="(80,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="andi"/>
+    </comp>
     <comp lib="0" loc="(80,120)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="ori"/>
+    </comp>
+    <comp lib="0" loc="(80,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="xori"/>
     </comp>
     <comp lib="0" loc="(230,120)" name="Pin">
       <a name="facing" val="west"/>
@@ -340,14 +463,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="1" loc="(200,120)" name="OR Gate">
       <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(80,160)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="xori"/>
-    </comp>
-    <comp lib="0" loc="(80,80)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="andi"/>
     </comp>
   </circuit>
 </project>
